@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Tabs Linker",
-  "version": "1.1",
+  "name": "Org-Dex",
+  "version": "1.2",
   "description": "Copies all tabs of the current window in org heading list as session having org links with tab title and link.",
   "permissions": [
     "tabs"
