@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   fetchButton.addEventListener("click", function () {
     var sessionNameText = sessionName.value !== "" ? sessionName.value : "Session Name";
-    var sessionDescriptionText = sessionDescription.value !== "" ? sessionDescription.value : "Few words about this session.";
     fetchButton.disabled = true;
 
     chrome.tabs.query({ currentWindow: true }, function (tabs) {
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return (tab.title ? "*** [[" + tab.url + "][" + tab.title + "]]" : "*** [[" + tab.url + "]]");
       });
       
-      let sessionInfo = `${sessionNameText}\n${getFormattedDateTime()}\n${sessionDescriptionText}\n`;
+      let sessionInfo = sessionDescription.value !== "" ? `${sessionNameText}\n${getFormattedDateTime()}\n${sessionDescription.value}\n` : `${sessionNameText}\n${getFormattedDateTime()}\n`
       var sessionText = sessionInfo + tabLinkTitle.join("\n");
 
       navigator.clipboard.writeText(sessionText)
