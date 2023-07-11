@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Tabs Linker",
+  "version": "1.0",
+  "description": "Copies all tabs of the current window in org heading list as session having org links with tab title and link.",
+  "permissions": [
+    "tabs"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}

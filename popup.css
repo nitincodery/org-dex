@@ -1,0 +1,28 @@
+body {
+  width: 200px;
+  height: 250px;
+  padding: 5px;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button, input, textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+h2 {
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+#session-name {
+  height: 40%;
+}
+
+#session-description {
+  height: 60%;
+}
